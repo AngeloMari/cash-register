@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Margarine&family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Cash Register</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Cash Register</h1>
+    </header>
+    <div id="user-input">
+      <h2 id="instructions">Enter cash from customer:</h2>
+      <input type="number" id="cash" autofocus />
+      <button id="purchase-btn">Purchase</button>
+    </div>
+    <div id="cash-register">
+      <div id="small-screen">
+        <div id="price-display"></div>
+      </div>
+      <div id="stem"></div>
+      <div id="big-screen">
+        <div id="change-due"></div>
+      </div>
+      <div id="trapezoid-border">
+        <div id="trapezoid">
+          <div id="keyboard">
+            <div class="keys"></div>
+            <div class="keys"></div>
+            <div class="keys"></div>
+            <div class="keys"></div>
+            <div class="keys"></div>
+            <div class="keys"></div>
+            <div class="keys"></div>
+            <div class="keys"></div>
+            <div class="keys"></div>
+            <div class="keys"></div>
+          </div>
+        </div>
+      </div>
+      <div id="drawer-border">
+        <div id="drawer">
+          <div id="keyhole-border">
+            <div id="keyhole"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="display-cid"></div>
+    <div id="chalk-overlay"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>

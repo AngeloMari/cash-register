@@ -1,0 +1,274 @@
+:root {
+  --bg: #eeecea;
+  --blk: #231717;
+}
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 1rem;
+}
+body {
+  font-family: "Patrick Hand", sans-serif;
+  text-align: center;
+  color: var(--txt);
+  background-color: var(--bg);
+}
+#chalk-overlay {
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("images/background.jpeg");
+  background-size: cover;
+  background-position: center;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+/* Title */
+#title,
+#display-cid {
+  font-family: "Margarine", sans-serif;
+}
+#title {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+/* User input */
+#user-input {
+  margin: 10px;
+}
+#instructions {
+  margin-bottom: 10px;
+}
+#cash,
+#purchase-btn {
+  font-family: "Patrick Hand", sans-serif;
+  background-color: var(--bg);
+}
+#cash {
+  width: 35%;
+  max-width: 180px;
+  border: 0;
+  border-bottom: 2px solid var(--blk);
+  text-align: center;
+}
+#cash:focus {
+  outline: none;
+}
+
+/* To remove input arrows/spinners */
+#cash {
+  -moz-appearance: textfield; /* for mozilla firefox */
+}
+#cash::-webkit-outer-spin-button,
+#cash::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#purchase-btn {
+  padding: 2px 5px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+/* Cash register container*/
+#cash-register {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: auto;
+  max-width: 450px;
+}
+
+/* Price display */
+#small-screen {
+  aspect-ratio: 5 / 2;
+  width: 35%;
+  padding: 5px;
+  border: 5px solid var(--blk);
+}
+#price-display,
+#change-due,
+#drawer,
+#keyhole-border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#price-display,
+#change-due {
+  position: relative;
+  z-index: 1;
+  font-size: 1.1rem;
+}
+#price-display {
+  height: 100%;
+  padding: 3px;
+  font-weight: bold;
+  background-color: var(--blk);
+  color: var(--bg);
+}
+#stem {
+  aspect-ratio: 1 / 1;
+  width: 5%;
+  padding: 10px 5px;
+  border: 5px solid var(--blk);
+  border-bottom: 0;
+  border-top: 0;
+}
+
+/* Change display */
+#big-screen {
+  aspect-ratio: 5 / 1.5;
+  width: 60%;
+  padding: 5px;
+  border: 5px solid var(--blk);
+}
+#change-due {
+  height: 100%;
+  padding: 5px;
+  background-color: var(--blk);
+  color: var(--bg);
+}
+
+/* Cash register keyboard */
+#trapezoid-border {
+  aspect-ratio: 5 / 1;
+  width: 75%;
+  padding: 0 6px 0 6px;
+  background-color: var(--blk);
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+#trapezoid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: -1px;
+  background-color: var(--bg);
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+#keyboard {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1px;
+  height: 80%;
+}
+.keys {
+  aspect-ratio: 1 / 1;
+  padding: 8px;
+  border: 2px solid var(--bg);
+  background-color: var(--blk);
+}
+
+/* Cash register drawer */
+#drawer-border,
+#drawer {
+  padding: 5px;
+  border: solid var(--blk);
+}
+#drawer-border {
+  aspect-ratio: 5 / 1.3;
+  width: 75%;
+  border-width: 5px;
+}
+#drawer {
+  height: 100%;
+  border-width: 3px;
+}
+#keyhole-border,
+#keyhole {
+  border: solid var(--blk);
+}
+#keyhole-border {
+  aspect-ratio: 1 / 1;
+  width: 10%;
+  padding: 3px;
+  border-width: 3px;
+  border-radius: 50%;
+}
+#keyhole {
+  aspect-ratio: 1 / 5;
+  height: 60%;
+  background-color: var(--blk);
+}
+
+/* Cash-in-drawer */
+#display-cid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 85%;
+  max-width: 450px;
+  margin-bottom: 20px;
+  padding: 5px;
+  background-image: url("images/notebook.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#display-cid * {
+  font-size: 0.9rem;
+}
+
+/* Responsiveness */
+@media (min-width: 480px) {
+  #title {
+    font-size: 1.7rem;
+  }
+  #instructions,
+  #purchase-btn,
+  #cash {
+    font-size: 1.2rem;
+  }
+  #price-display,
+  #change-due {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 768px) {
+  #title {
+    font-size: 1.9rem;
+  }
+  #instructions,
+  #cash {
+    font-size: 1.4rem;
+  }
+  #purchase-btn {
+    padding: 2px 8px;
+    border-radius: 18px;
+    font-weight: bold;
+  }
+  #display-cid * {
+    font-size: 1rem;
+  }
+  #price-display,
+  #change-due {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1024px) {
+  #title {
+    font-size: 2.2rem;
+  }
+  #display-cid * {
+    font-size: 1.1rem;
+  }
+  #price-display,
+  #change-due {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  #title {
+    font-size: 2.5rem;
+  }
+}
